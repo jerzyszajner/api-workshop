@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/countries.css" />
+    <title></title>
+  </head>
+  <body>
+    <header class="header">
+      <span class="header__icon-container">
+        <i class="fa-solid fa-map-location-dot fa-4x header__logo"></i>
+      </span>
+      <h1 class="home-header__title">Explore countries</h1>
+    </header>
+    <main>
+      <div class="back-button">
+        <a href="../../index.html">
+          <i class="fa-regular fa-cirkle-left fa-4x back-button__logo"></i>
+        </a>
+      </div>
+      <div class="explore-countries">
+        <form>
+          <label for="search">Country name</label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placecholder="Enter country name"
+            class="search-form__input"
+          />
+          <button type="submit" class="search-form__submit-button"></button>
+          <p class="serch-form__error-message">error message</p>
+        </form>
+        <div class="country-card__container">
+          <span class="country-card__image"> </span>
+        </div>
+        <div class="country-card">
+          <ul class="country-card__list"></ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
