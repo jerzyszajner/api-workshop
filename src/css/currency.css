@@ -1,0 +1,103 @@
+body {
+  min-width: 380px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter-Regular;
+  background-color: var(--color-background-medium);
+  color: var(--color-text-dark);
+  padding: var(--spacing-large);
+}
+/* ------------------- */
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter-Regular;
+  color: var(--color-text-dark);
+}
+/* ------------------- */
+.currency-form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+.currency-form {
+  min-width: 360px;
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 0 16px 2px var(--color-card-link-border);
+  background-color: var(--color-background-light);
+}
+.currency-form__group > * {
+  display: block;
+}
+.currency-form__group label {
+  font-family: Inter-Bold;
+}
+.currency-form__amount,
+.currency-form__from-currency,
+.currency-form__to-currency {
+  width: 100%;
+  height: 32px;
+  padding: 0 var(--spacing-x-small);
+}
+.currency-form__switch-container {
+  text-align: center;
+}
+.currency-form__switch-logo {
+  color: var(--color-text-dark);
+}
+.currency-form__switch-button {
+  padding: var(--spacing-medium);
+  background-color: transparent;
+  border: 2px solid var(--color-card-link-border);
+  border-radius: var(--border-radius-small);
+}
+.currency-form__switch-button:hover {
+  box-shadow: 0 0 4px 2px var(--color-background-dark);
+  transition: box-shadow 0.3s;
+}
+.currency-form__convert-button {
+  height: 48px;
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+  transition: background-color 0.3s;
+  font-size: var(--font-size-base);
+  font-family: Inter-Regular;
+}
+.currency-form__convert-button:hover {
+  background-color: var(--color-button-hover);
+}
+.result-paragraph {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  font-size: var(--font-size-medium);
+  color: var(--color-text-dark);
+  background-color: #f0f0f0;
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-small);
+  border: 1px solid #dddddd;
+}
+.back-button {
+  position: fixed;
+  top: 32px;
+  left: 32px;
+}
+.back-button__logo {
+  color: var(--color-text-dark);
+}
