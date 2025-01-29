@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/weather.css" />
+    <title>TravelWise</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <span class="header__icon-container">
+        <i class="fa-solid fa-cloud-sun-rain fa-4x card__logo"></i>
+      </span>
+      <h1 class="header__title">Weather forecast</h1>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="weather">
+      <div class="back-button">
+        <a href="../index.html">
+          <i class="fa-regular fa-circle-left fa-4x back-button__logo"></i>
+        </a>
+      </div>
+      <div class="weather__container">
+        <form class="weather-form">
+          <label for="city-search" class="weather-form__label"
+            >City name:
+          </label>
+          <input
+            type="text"
+            name="city-search"
+            id="city-search"
+            placeholder="Enter city name"
+            class="weather-form__search-input"
+          />
+          <button class="weather-form__submit-button">Search</button>
+        </form>
+        <p class="weather-form__error-message"></p>
+        <div class="weather-card-container">
+          <span class="weather-card__image"> /></span>
+          <div class="weather-card">
+            <ul class="weather-card__list"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/fetchWeather.js" type="module"></script>
+  </body>
+</html>

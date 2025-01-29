@@ -11,10 +11,27 @@ dotenv.config();
 const app = express();
 // Enable cors for all the routes
 app.use(cors());
-// load the environment variable from .env
+// Load the environment variable from .env
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 const EXCHANGE_API_KEY = process.env.EXCHANGE_API_KEY;
 
-// Exchange rate endpoint
+// Weather endpiont =============================
+app.get("/weather", async (req, res) => {
+  const searchQuery = req.query.q;
+  try {
+    const response = await fetch(
+      `http://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${searchQuery}`
+    );
+    const data = await response.json();
+    console.log(data);
+
+    res.json(data);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+// Exchange rate endpoint  =============================
 app.get("/exchange-rate", async (req, res) => {
   const searchQuery = req.query.q;
   try {
